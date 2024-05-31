@@ -30,6 +30,9 @@ def Save_file_list():
 
 #下载开始之前清理文件夹函数
 def Clear_txt():
+    file_name_list.clear()
+    download_list.clear()
+
     if not os.path.exists(Tss_file):
         os.makedirs(Tss_file,exist_ok=True)
     for filename in os.listdir(Tss_file):
